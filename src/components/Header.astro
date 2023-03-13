@@ -1,0 +1,57 @@
+---
+import HamburgerMenu from "./icons/Icon-hamburger-menu.astro"
+import PrimaryNav from "./navigation/Primary-nav.astro"
+import SocialContainer from "./navigation/socialContainer.astro"
+---
+
+<header class='mx-auto px-4'>
+  <div class='pt-4 container flex justify-between mx-auto items-center'>
+    <img
+      class='relative z-20 shadow-accent-400 shadow-xl'
+      src='../images/logotype.png'
+      alt='this should be a logotype'
+    />
+
+    <HamburgerMenu />
+    <PrimaryNav />
+    <SocialContainer />
+  </div>
+</header>
+
+<script>
+  const burgerMenu = document.querySelector(".burger-menu") as HTMLButtonElement
+  const primaryNav = document.getElementById("primary-nav") as HTMLUListElement
+  const socialContainer = document.querySelector(".social-container") as HTMLDivElement
+
+  burgerMenu.addEventListener("click", () => {
+    if (socialContainer.classList.contains("hidden")) {
+      // primaryNav remove hidden and fadeOut Animation, add fadeIn animation
+      primaryNav.classList.remove("animate-fadeOut")
+      primaryNav.classList.remove("hidden")
+      primaryNav.classList.add("animate-fadeIn")
+
+      // socialContainer remove class hidden and fadeOut and add class flex and fadeIn
+      socialContainer.classList.remove("hidden")
+      socialContainer.classList.remove("animate-fadeOut")
+      socialContainer.classList.add("flex")
+      socialContainer.classList.add("animate-fadeIn")
+    } else {
+      // primaryNav add hidden and fadeOut Animation, remove fadeIn animation
+      primaryNav.classList.add("animate-fadeOut")
+      primaryNav.classList.remove("animate-fadeIn")
+
+      // socialContainer adds class animate-fadeOut and remove class animate-fadeIn
+      socialContainer.classList.add("animate-fadeOut")
+      socialContainer.classList.remove("animate-fadeIn")
+
+      setTimeout(() => {
+        // socialContainer after the Timeout add hidden class and remove flex class
+        socialContainer.classList.add("hidden")
+        socialContainer.classList.remove("flex")
+
+        // primaryNav add class hidden
+        primaryNav.classList.add("hidden")
+      }, 550)
+    }
+  })
+</script>
