@@ -24,7 +24,29 @@ module.exports = {
       "3xl": "3rem",
       "4xl": "4rem",
       "5xl": "6rem",
-    }
+    },
+    extend: {
+      transitionProperty: {
+        width: "width",
+      },
+      animation: {
+        fadeIn: "fadeIn 500ms ease-in-out forwards",
+        fadeOut: "fadeOut 500ms ease-in-out forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { transform: "translateX(0)", opacity: "1" },
+          "100%": { transform: "translateX(-100%)", opacity: "0" },
+        },
+      },
+      boxShadow: {
+        original: "0px 0.5px 1px rgba(0, 0, 0, 0.5);",
+      },
+    },
   },
 
   plugins: [],
