@@ -1,5 +1,7 @@
 ---
 import "../styles/reset.css"
+
+import Header from "../components/Header.astro"
 ---
 
 <!DOCTYPE html>
@@ -17,9 +19,11 @@ import "../styles/reset.css"
       href='https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Outfit:wght@300;400;700&display=swap'
       rel='stylesheet'
     />
+
     <!-- google fonts end -->
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>

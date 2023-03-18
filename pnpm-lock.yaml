@@ -3,13 +3,11 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/tailwind': ^3.1.0
   astro: ^2.1.2
-  sass: ^1.58.3
   tailwindcss: ^3.0.24
 
 dependencies:
   '@astrojs/tailwind': 3.1.0_5fkwwuzubt6borit3q7k7y2k74
-  astro: 2.1.2_sass@1.58.3
-  sass: 1.58.3
+  astro: 2.1.2
   tailwindcss: 3.2.7
 
 packages:
@@ -54,7 +52,7 @@ packages:
       astro: ^2.1.0
     dependencies:
       '@astrojs/prism': 2.1.0
-      astro: 2.1.2_sass@1.58.3
+      astro: 2.1.2
       github-slugger: 1.5.0
       image-size: 1.0.2
       import-meta-resolve: 2.2.1
@@ -86,7 +84,7 @@ packages:
       tailwindcss: ^3.0.24
     dependencies:
       '@proload/core': 0.3.3
-      astro: 2.1.2_sass@1.58.3
+      astro: 2.1.2
       autoprefixer: 10.4.14_postcss@8.4.21
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
@@ -821,7 +819,7 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro/2.1.2_sass@1.58.3:
+  /astro/2.1.2:
     resolution: {integrity: sha512-qxBIPHfFJhwNOxI2E96XrGrUM6lGkDRkDY8iqEJNFWPGP+t5yY5SWb8H+OdYUGopexy1GGjoY7SYQCzFBkt7iw==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -881,7 +879,7 @@ packages:
       typescript: 4.9.5
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.1.4_sass@1.58.3
+      vite: 4.1.4
       vitefu: 0.2.4_vite@4.1.4
       yargs-parser: 21.1.1
       zod: 3.21.4
@@ -1563,10 +1561,6 @@ packages:
     hasBin: true
     dependencies:
       queue: 6.0.2
-    dev: false
-
-  /immutable/4.2.4:
-    resolution: {integrity: sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==}
     dev: false
 
   /import-meta-resolve/2.2.1:
@@ -2705,16 +2699,6 @@ packages:
       suf-log: 2.5.3
     dev: false
 
-  /sass/1.58.3:
-    resolution: {integrity: sha512-Q7RaEtYf6BflYrQ+buPudKR26/lH+10EmO9bBqbmPh/KeLqv8bjpTNqxe71ocONqXq+jYiCbpPUmQMS+JJPk4A==}
-    engines: {node: '>=12.0.0'}
-    hasBin: true
-    dependencies:
-      chokidar: 3.5.3
-      immutable: 4.2.4
-      source-map-js: 1.0.2
-    dev: false
-
   /section-matter/1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
     engines: {node: '>=4'}
@@ -3112,7 +3096,7 @@ packages:
       vfile-message: 3.1.4
     dev: false
 
-  /vite/4.1.4_sass@1.58.3:
+  /vite/4.1.4:
     resolution: {integrity: sha512-3knk/HsbSTKEin43zHu7jTwYWv81f8kgAL99G5NWBcA1LKvtvcVAC4JjBH1arBunO9kQka+1oGbrMKOjk4ZrBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3141,7 +3125,6 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 3.19.0
-      sass: 1.58.3
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
@@ -3154,7 +3137,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.1.4_sass@1.58.3
+      vite: 4.1.4
     dev: false
 
   /vscode-css-languageservice/6.2.4:
