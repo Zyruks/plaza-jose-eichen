@@ -1,0 +1,112 @@
+- name: "Type: Bug"
+  color: e80c0c
+  description: Something isn't working as expected.
+  from_name: "Type: Bug test"
+
+- name: "Type: Enhancement"
+  color: 54b2ff
+  description: Suggest an improvement for an existing feature.
+
+- name: "Type: Feature"
+  color: 54b2ff
+  description: Suggest a new feature.
+
+- name: "Type: Security"
+  color: fbff00
+  description: A problem or enhancement related to a security issue.
+
+- name: "Type: Question"
+  color: 9309ab
+  description: Request for information.
+
+- name: "Type: Test"
+  color: ce54e3
+  description: A problem or enhancement related to a test.
+
+- name: "Status: Awaiting Review"
+  color: 24d15d
+  description: Ready for review.
+
+- name: "Status: WIP"
+  color: 07b340
+  description: Currently being worked on.
+
+- name: "Status: Waiting"
+  color: 38C968
+  description: Waiting on something else to be ready.
+
+- name: "Status: Stale"
+  color: 66b38a
+  description: Has had no activity for some time.
+
+- name: "Status: Abandoned"
+  color: 000000
+  description: Abandoned and will not be worked on.
+
+- name: "Status: Accepted"
+  color: 009800
+  description: Accepted and will be worked on.
+
+- name: "Status: Available"
+  color: bfe5bf
+  description: Available for anyone to work on.
+
+- name: "Status: Completed"
+  color: 006b75
+  description: This issue has been completed.
+
+- name: "Status: Pending"
+  color: fef2c0
+  description: This issue is pending and will not be worked on until the pending status is resolved.
+
+- name: "Status: Revision Needed"
+  color: e11d21
+  description: This issue needs to be revised before it can be worked on.
+
+- name: "Duplicate"
+  color: EB862D
+  description: Duplicate of another issue.
+
+- name: "Invalid"
+  color: faef50
+  description: This issue doesn't seem right.
+
+- name: "Priority: Critical"
+  color: e11d21
+  description: Task is considered maximum-priority.
+
+- name: "Priority: High"
+  color: ff008c
+  description: Task is considered higher-priority.
+
+- name: "Priority: Medium"
+  color: fbca04
+  description: Task is considere4d medium-priority
+
+- name: "Priority: Low"
+  color: 690a34
+  description: Task is considered lower-priority.
+
+- name: "Documentation"
+  color: 2fbceb
+  description: An issue/change with the documentation.
+
+- name: "Won't fix"
+  color: C8D9E6
+  description: Reported issue is working as intended.
+
+- name: "3rd party issue"
+  color: e88707
+  description: This issue might be caused by a 3rd party script/package/other reasons
+
+- name: "OS: Windows"
+  color: AEB1C2
+  description: Is Windows-specific
+
+- name: "OS: Mac"
+  color: AEB1C2
+  description: Is Mac-specific
+
+- name: "OS: Linux"
+  color: AEB1C2
+  description: Is Linux-specific
