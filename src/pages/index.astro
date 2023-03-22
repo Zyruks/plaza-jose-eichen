@@ -1,5 +1,34 @@
 ---
-import General from "../layout/General.astro"
+import Card from "src/components/Card.astro"
+import GeneralLayout from "../layout/General.astro"
+import GridLayout from "src/layout/Grid.astro"
+import Sections from "src/layout/Sections.astro"
 ---
 
-<General />
+<GeneralLayout>
+  <Sections
+    sectionName='hero relative mt-10 h-[90vh] bg-hero-img bg-no-repeat bg-cover bg-center'
+    containerClass='text-neutral-100 z-20 relative pt-10'>
+    <div
+      slot='outside'
+      class='absolute inset-0 z-10 bg-gradient-to-b from-neutral-800 via-neutral-800 to-neutral-300 opacity-70'>
+    </div>
+
+    <h1 class='text-4xl font-serif text-center'>Jose Eichen</h1>
+    <p class='max-w-text mx-auto'>
+      We welcome you with open arms. We are dedicated to providing the best possible experience,
+      whether you're shopping or just hanging out. Come visit us and become a part of our family
+      today.
+    </p>
+  </Sections>
+
+  <Sections sectionName='feature-stores' containerClass=''>
+    <h2 class='text-2xl text-center font-bold'>Feature Stores</h2>
+    <GridLayout>
+      <Card image='/images/card-desktop2.png' title='HOLLISTER' expand />
+      <Card image='/images/card-desktop.png' title='Bath & Body' />
+      <Card image='/images/card-deskto3p.png' title='ALISS' />
+      <Card image='/images/card-desktop.png' title='Bath & Body' expand />
+    </GridLayout>
+  </Sections>
+</GeneralLayout>
