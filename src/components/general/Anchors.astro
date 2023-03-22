@@ -1,0 +1,20 @@
+---
+type Props = {
+  link: string
+  textColor?: string
+  bgColor?: string
+  underline?: boolean | string
+}
+let { link, textColor = "text-accent-400 hover:text-opacity-50", bgColor, underline } = Astro.props
+
+if (underline) {
+  underline = "underline"
+}
+---
+
+<a
+  href={link}
+  target='_blank'
+  class={` transition-colors duration-200 ${textColor} ${bgColor} ${underline} `}>
+  <slot />
+</a>
