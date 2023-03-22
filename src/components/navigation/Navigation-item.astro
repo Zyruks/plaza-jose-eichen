@@ -1,12 +1,19 @@
 ---
-const { content, active } = Astro.props
+type Props = {
+  content: string
+  active?: boolean
+  link: string
+}
+
+const { content, active, link } = Astro.props as Props
 let classes =
   "relative transition-color duration-300 text-neutral-800 hover:text-neutral-100 md:text-neutral-300  md:hover:text-primary-400 | after:h-1 after:transition-width after:w-0 after:hover:w-full  after:duration-500 md:after:duration-300  after:content-[''] after:absolute after:bottom-0 md:after:h-0.5 after:inset-x-0 after:bg-neutral-100 md:after:bg-primary-400 cursor-pointer"
+
 if (active) {
   classes = classes.replace("md:text-neutral-300", "md:text-neutral-800")
 }
 ---
 
 <li class={classes}>
-  <a href='#'>{content}</a>
+  <a href={link}>{content}</a>
 </li>

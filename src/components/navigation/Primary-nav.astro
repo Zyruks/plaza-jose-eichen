@@ -7,9 +7,9 @@ import NavigationItem from "./Navigation-item.astro"
   class='animate-fadeOut md:bg-opacity-0 hidden bg-primary-400 absolute inset-0 md:justify-between md:items-center md:flex md:static md:animate-none'>
   <ul
     class='mb-auto mt-28 text-2xl ml-4 uppercase font-sans md:flex md:gap-6 md:text-lg md:h-auto md:pt-0 md:bg-opacity-0 md:px-0 md:mt-0'>
-    <NavigationItem content='home' active />
-    <NavigationItem content='history' />
-    <NavigationItem content='store' />
-    <NavigationItem content='contact' />
+    <NavigationItem content='home' active link='/' />
+    <NavigationItem content='history' link='#' />
+    <NavigationItem content='store' link='/store' />
+    <NavigationItem content='contact' link='/contact' />
   </ul>
 </nav>

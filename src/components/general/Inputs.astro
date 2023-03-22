@@ -1,0 +1,12 @@
+---
+const { inputName, inputType = "text", label } = Astro.props
+---
+
+<div class='flex flex-col w-full'>
+  <label for={inputName ? inputName : label} class='uppercase'>{label ? label : inputName}</label>
+  <input
+    id={inputName ? inputName : label}
+    type={inputType}
+    class='transition-all duration-300 w-full bg-neutral-200 shadow shadow-neutral-800/40 py-4 pl-4 rounded-md focus-visible:bg-neutral-100'
+  />
+</div>

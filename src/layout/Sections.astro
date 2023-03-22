@@ -1,10 +1,14 @@
 ---
-const { sectionName, containerClass } = Astro.props
+type sectionType = {
+  sectionName: string
+  containerClass: string
+}
+const { sectionName, containerClass } = Astro.props as sectionType
 ---
 
 <section class={`${sectionName} my-10`}>
   <slot name='outside' />
-  <div class={`container mx-auto ${containerClass}`}>
+  <div class={`container mx-auto px-4 ${containerClass}`}>
     <slot />
   </div>
 </section>

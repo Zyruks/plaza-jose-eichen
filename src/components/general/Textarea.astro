@@ -1,0 +1,12 @@
+---
+const { inputName, label } = Astro.props
+---
+
+<div class='flex flex-col'>
+  <label for={inputName ? inputName : label} class='uppercase'>{label ? label : inputName}</label>
+  <textarea
+    rows='5'
+    id={inputName ? inputName : label}
+    class='transition-all duration-300 w-full bg-neutral-200 shadow shadow-neutral-800/40 py-4 pl-4 rounded-md focus-visible:bg-neutral-100'
+  ></textarea>
+</div>
