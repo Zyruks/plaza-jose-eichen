@@ -1,12 +1,20 @@
 ---
-let { title, content, image, imgAlt = "none", expand } = Astro.props
+type Props = {
+  title: string
+  content?: string
+  image: string
+  imgAlt?: string
+  className?: string
+  expand?: boolean
+}
+let { title, content, image, imgAlt = "none", expand, className } = Astro.props as Props
 
 if (expand) {
-  expand = "md:col-span-2"
+  className = "md:col-span-2"
 }
 ---
 
-<div class={`card overflow-hidden grid relative group ${expand}  `}>
+<div class={`card overflow-hidden grid relative group ${className}  `}>
   <!-- image container section -->
   <div
     class='image-container relative h-60 max-h-60 md:group-hover:max-h-68 transition-all md:shadow-2xl md:shadow-neutral-100 duration-200 ease-in-out overflow-hidden rounded-md group-hover:md:shadow-lg group-hover:md:shadow-neutral-300'>

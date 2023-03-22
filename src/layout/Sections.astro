@@ -1,5 +1,9 @@
 ---
-const { sectionName, containerClass } = Astro.props
+type sectionType = {
+  sectionName: string
+  containerClass: string
+}
+const { sectionName, containerClass } = Astro.props as sectionType
 ---
 
 <section class={`${sectionName} my-10`}>
