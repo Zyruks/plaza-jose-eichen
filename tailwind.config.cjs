@@ -27,20 +27,33 @@ module.exports = {
     },
     extend: {
       transitionProperty: {
-        width: "width",
+        "width": "width",
+        "max-h": "max-height",
       },
       animation: {
         fadeIn: "fadeIn 500ms ease-in-out forwards",
         fadeOut: "fadeOut 500ms ease-in-out forwards",
+        "bounce-in": "bounce-in 300ms ease-in-out forwards",
+        "bounce-out": "bounce-out 300ms ease-in-out forwards",
       },
       keyframes: {
-        fadeIn: {
+        "fadeIn": {
           "0%": { transform: "translateX(-100%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
-        fadeOut: {
+        "fadeOut": {
           "0%": { transform: "translateX(0)", opacity: "1" },
           "100%": { transform: "translateX(-100%)", opacity: "0" },
+        },
+        "bounce-in": {
+          "0%": { height: "20rem" },
+          "80%": { height: "14rem" },
+          "100%": { height: "15rem" },
+        },
+        "bounce-out": {
+          "0%": { height: "15rem "},
+          "80%": { height: "22rem" },
+          "100%": { height: "20rem" },
         },
       },
       boxShadow: {
