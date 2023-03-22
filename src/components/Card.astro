@@ -1,0 +1,66 @@
+---
+let { title, content, image, imgAlt = "none", expand } = Astro.props
+
+if (expand) {
+  expand = "md:col-span-2"
+}
+---
+
+<div class={`card overflow-hidden grid relative group ${expand}  `}>
+  <!-- image container section -->
+  <div
+    class='image-container relative h-60 max-h-60 md:group-hover:max-h-68 transition-all md:shadow-2xl md:shadow-neutral-100 duration-200 ease-in-out overflow-hidden rounded-md group-hover:md:shadow-lg group-hover:md:shadow-neutral-300'>
+    <div
+      class='group-hover:bg-neutral-100 group-hover:bg-opacity-0 absolute inset-0 md:group-hover:backdrop-blur-sm z-20'>
+    </div>
+
+    <img
+      class='w-full h-full md:group-hover:scale-[1.1] transition-transform duration-200 ease-in-out'
+      src={image}
+      alt={imgAlt}
+    />
+  </div>
+  <!-- image container section end -->
+  <!-- Text container -->
+  <div class='text-container pt-6 flex flex-col gap-2 items-start'>
+    <div>
+      <h3 class='uppercase font-serif text-xl text-neutral-900 font-semibold leading-6'>
+        {title}
+      </h3>
+      <p class='sub-title'>Best Store Ever</p>
+    </div>
+    <p
+      class='transition-all duration-500 leading-5 font-normal md:opacity-0 group-hover:md:opacity-100'>
+      Shop casual women's, men's, maternity, kids' & baby clothes at Gap. Our style is clean and
+      confident, comfortable and accessible, classic and modern. <a
+        href='#'
+        class='text-accent-400 underline cursor-pointer'>learn more</a
+      >
+    </p>
+  </div>
+  <!-- Text container end-->
+</div>
+
+<script>
+  const cards: NodeListOf<HTMLDivElement> = document.querySelectorAll(".card")
+
+  cards.forEach((card) => {
+    const cardChild = card.querySelector(".image-container") as HTMLDivElement
+
+    if (window.innerWidth >= 768) {
+      card.addEventListener("mouseenter", () => {
+        setTimeout(() => {
+          cardChild.style.maxHeight = "12rem"
+        }, 150)
+        cardChild.style.maxHeight = "10rem"
+      })
+
+      card.addEventListener("mouseleave", () => {
+        setTimeout(() => {
+          cardChild.style.maxHeight = "15rem"
+        }, 100)
+        cardChild.style.maxHeight = "18rem"
+      })
+    }
+  })
+</script>
