@@ -1,16 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+
   theme: {
-    colors: {
-      "neutral-100": "hsl(60, 100%, 100%)",
-      "neutral-200": "hsl(225, 14%, 95%)",
-      "neutral-300": "hsl(0, 0%, 55%)",
-      "neutral-800": "hsl(0, 0%, 16%)",
-      "neutral-900": "hsl(0, 0%, 5%)",
-      "accent-400": "hsl(340, 68%, 53%)",
-      "primary-400": "hsl(25, 100%, 62%)",
+    container: {
+
+
+      center: true
     },
+
     fontFamily: {
       sans: ["Outfit", "serif"],
       serif: ["Lora", "serif"],
@@ -26,13 +24,28 @@ module.exports = {
       "5xl": "6rem",
     },
     extend: {
+      colors: {
+        "neutral-100": "hsl(60, 100%, 100%)",
+        "neutral-200": "hsl(225, 14%, 95%)",
+        "neutral-300": "hsl(0, 0%, 55%)",
+        "neutral-800": "hsl(0, 0%, 16%)",
+        "neutral-900": "hsl(0, 0%, 5%)",
+        "accent-400": "hsl(340, 68%, 53%)",
+        "primary-400": "hsl(25, 100%, 62%)",
+      },
+      backgroundImage: {
+        "hero-img": "url(./images/hero-img.png)",
+      },
+      maxWidth: {
+        text: "60ch",
+      },
       transitionProperty: {
         "width": "width",
         "max-h": "max-height",
       },
       animation: {
-        fadeIn: "fadeIn 500ms ease-in-out forwards",
-        fadeOut: "fadeOut 500ms ease-in-out forwards",
+        "fadeIn": "fadeIn 500ms ease-in-out forwards",
+        "fadeOut": "fadeOut 500ms ease-in-out forwards",
         "bounce-in": "bounce-in 300ms ease-in-out forwards",
         "bounce-out": "bounce-out 300ms ease-in-out forwards",
       },
@@ -51,7 +64,7 @@ module.exports = {
           "100%": { height: "15rem" },
         },
         "bounce-out": {
-          "0%": { height: "15rem "},
+          "0%": { height: "15rem " },
           "80%": { height: "22rem" },
           "100%": { height: "20rem" },
         },

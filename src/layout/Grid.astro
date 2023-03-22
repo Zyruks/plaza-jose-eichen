@@ -1,7 +1,5 @@
-<div class='mx-auto max-w-screen-xl py-10'>
-  <div class='grid-container pt-8 mx-4 gap-8 md:gap-8'>
-    <slot />
-  </div>
+<div class='grid-container pt-8 mx-auto gap-8 md:gap-8'>
+  <slot />
 </div>
 
 <style>
@@ -14,14 +12,14 @@
 
   @media (min-width: 768px) {
     .grid-container {
-      grid-template-rows: repeat(3, 400px);
+      grid-template-rows: repeat(auto-fit, 400px);
     }
   }
   @media (min-width: 1000px) {
     .grid-container {
       --min-item-width: 350px;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(auto-fit, 1fr);
     }
   }
 </style>
