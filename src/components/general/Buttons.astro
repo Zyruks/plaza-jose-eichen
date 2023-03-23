@@ -1,0 +1,33 @@
+---
+type Props = {
+  paddingX?: string
+  paddingY?: string
+  bgColor?: string
+  borderRadius?: string
+  textSize?: string
+  textColor?: string
+  textColorHover?: string
+  border?: string
+  bgColorHover?: string
+
+  extra?: string
+}
+
+const {
+  paddingX = "px-4",
+  paddingY = "py-2",
+  bgColor = "bg-accent-400",
+  borderRadius = "rounded-md",
+  textSize = "text-lg",
+  textColor = "text-neutral-100",
+  textColorHover = "hover:text-accent-400",
+  border = "border-2 border-accent-400",
+  bgColorHover = "hover:bg-transparent",
+  extra,
+} = Astro.props as Props
+---
+
+<button
+  class={`transition-colors duration-300 ease-in-out group  ${border} ${paddingX} ${paddingY} ${bgColor} ${borderRadius} ${bgColorHover} ${textSize} ${textColorHover} ${textColor} ${extra} flex items-center`}>
+  <slot />
+</button>

@@ -1,0 +1,59 @@
+---
+import Sections from "src/layout/Sections.astro"
+import Buttons from "../general/Buttons.astro"
+import NavigationItem from "./Navigation-item.astro"
+import IconArrow from "../icons/Icon-arrow.astro"
+import Anchors from "../general/Anchors.astro"
+---
+
+<footer class='absolute inset-x-0 bg-neutral-900 text-neutral-100'>
+  <Sections containerClass='grid gap-10 '>
+    <div class='flex justify-between items-center flex-wrap'>
+      <nav>
+        <ul class='text-lg uppercase text-neutral-100 flex flex-col md:flex-row gap-x-4 gap-y-2'>
+          <NavigationItem
+            content='home'
+            link='/'
+            textColor='text-neutral-200 hover:text-accent-400'
+            afterElement=''
+          />
+          <NavigationItem
+            content='history'
+            link='#'
+            textColor='text-neutral-200 hover:text-accent-400'
+            afterElement=''
+          />
+          <NavigationItem
+            content='store'
+            link='/store'
+            textColor='text-neutral-200 hover:text-accent-400'
+            afterElement=''
+          />
+          <NavigationItem
+            content='contact'
+            link='/contact'
+            textColor='text-neutral-200 hover:text-accent-400'
+            afterElement=''
+          />
+        </ul>
+      </nav>
+      <a href='#top'>
+        <Buttons
+          paddingX=''
+          paddingY=''
+          extra='hover:-translate-y-1 transition-transform hover:scale-[1.05]'>
+          <IconArrow width='40px' height='40px' />
+        </Buttons>
+      </a>
+    </div>
+    <p class=''>
+      COPYRIGHT© 2005-2023, Plaza José Eichen. ALL RIGHTS RESERVED. By continuing past this page
+      and/or using this site, you agree to abide by <Anchors link='#' underline>
+        the Terms of Use
+      </Anchors> for this site, which prohibit commercial use of any information on this site. View our
+      <Anchors link='#' underline>Privacy Policy</Anchors>, <Anchors link='#' underline>
+        Cookie Policy.
+      </Anchors>
+    </p>
+  </Sections>
+</footer>
