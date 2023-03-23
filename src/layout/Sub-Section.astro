@@ -9,7 +9,7 @@ type Props = {
   complementaryText?: string
 }
 const { title, link, href, complementaryText, linkPrefix = "" } = Astro.props
-let hidden: string
+let hidden: string = ""
 if (!complementaryText) {
   hidden = "hidden"
 }
