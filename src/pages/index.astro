@@ -1,8 +1,11 @@
 ---
-import Card from "src/components/Card.astro"
+import Card from "../components/Card.astro"
 import GeneralLayout from "../layout/General.astro"
-import GridLayout from "src/layout/Grid.astro"
-import Sections from "src/layout/Sections.astro"
+import GridLayout from "../layout/Grid.astro"
+import Sections from "../layout/Sections.astro"
+
+import { getCollection } from "astro:content"
+const allStores = await getCollection("stores")
 ---
 
 <GeneralLayout>

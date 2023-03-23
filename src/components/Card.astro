@@ -1,13 +1,14 @@
 ---
 type Props = {
   title: string
-  content?: string
+  subTitle: string
+  content: string
   image: string
   imgAlt?: string
   className?: string
   expand?: boolean
 }
-let { title, content, image, imgAlt = "none", expand, className } = Astro.props as Props
+let { title, subTitle, content, image, imgAlt = "none", expand, className } = Astro.props as Props
 
 if (expand) {
   className = "md:col-span-2"
@@ -35,15 +36,12 @@ if (expand) {
       <h3 class='uppercase font-serif text-xl text-neutral-900 font-semibold leading-6'>
         {title}
       </h3>
-      <p class='sub-title'>Best Store Ever</p>
+      <p class='sub-title'>{subTitle}</p>
     </div>
     <p
       class='transition-all duration-500 leading-5 font-normal md:opacity-0 group-hover:md:opacity-100'>
-      Shop casual women's, men's, maternity, kids' & baby clothes at Gap. Our style is clean and
-      confident, comfortable and accessible, classic and modern. <a
-        href='#'
-        class='text-accent-400 underline cursor-pointer'>learn more</a
-      >
+      {content}
+      <a href='#' class='text-accent-400 underline cursor-pointer'>learn more</a>
     </p>
   </div>
   <!-- Text container end-->
