@@ -3,6 +3,9 @@ import Card from "../components/Card.astro"
 import GeneralLayout from "../layout/General.astro"
 import GridLayout from "../layout/Grid.astro"
 import Sections from "../layout/Sections.astro"
+
+import { getCollection } from "astro:content"
+const allStores = await getCollection("stores")
 ---
 
 <GeneralLayout>
